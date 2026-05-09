@@ -29,7 +29,6 @@ public class InventarioDiarioDAO {
     }
 
     public boolean registrar(InventarioDiario inv) {
-        // INSERT ... ON CONFLICT para no duplicar si ya existe el registro del día
         String sql = "INSERT INTO INVENTARIO_DIARIO (fecha_inventario, id_producto, nivel_stock) " +
                      "VALUES (?, ?, ?) ON CONFLICT (fecha_inventario, id_producto) DO UPDATE SET nivel_stock = EXCLUDED.nivel_stock";
         try (PreparedStatement ps = Conexion.getInstancia().prepareStatement(sql)) {
