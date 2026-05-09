@@ -107,7 +107,6 @@ public class PanelPedidos extends JPanel {
         tablaDetalle.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 13));
         tablaDetalle.setGridColor(new Color(220, 220, 230));
 
-        // Ocultar columna ID detalle
         tablaDetalle.getColumnModel().getColumn(0).setMinWidth(0);
         tablaDetalle.getColumnModel().getColumn(0).setMaxWidth(0);
         tablaDetalle.getColumnModel().getColumn(0).setWidth(0);
@@ -231,7 +230,6 @@ public class PanelPedidos extends JPanel {
             JOptionPane.WARNING_MESSAGE
         );
         if (confirm == JOptionPane.YES_OPTION) {
-            // Primero eliminar detalles, luego el pedido (integridad referencial)
             detalleDAO.eliminarPorPedido(idPedido);
             boolean ok = pedidoDAO.eliminar(idPedido);
             if (ok) {

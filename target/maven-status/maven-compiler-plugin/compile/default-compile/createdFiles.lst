@@ -3,11 +3,11 @@ vista\pedidos\PanelPedidos.class
 vista\productos\PanelProductos.class
 modelo\DetallePedido.class
 vista\productos\PanelProductos$2.class
+main\Main.class
 modelo\TipoProducto.class
 vista\clientes\PanelClientes$1.class
 vista\reportes\PanelReportes.class
 dao\PedidoDAO.class
-Main.class
 dao\TipoProductoDAO.class
 modelo\Pedido.class
 vista\reportes\PanelReportes$1.class
